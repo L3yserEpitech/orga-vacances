@@ -17,6 +17,7 @@ export const FRIENDS = [
   "Jul",
   "Julie",
   "Bastien",
+  "Jules",
 ];
 // =============================================
 

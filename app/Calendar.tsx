@@ -14,6 +14,7 @@ const SHORT: Record<string, string> = Object.fromEntries(
     const others = FRIENDS.filter((o) => o !== n).map((o) => o.toLowerCase());
     let len = Math.min(2, n.length);
     while (len < n.length && others.some((o) => o.startsWith(n.slice(0, len).toLowerCase()))) len++;
+    if (n[len - 1] === " ") len++; // "Jules photo" → "Jules p" plutôt que "Jules "
     return [n, n.slice(0, len)];
   }),
 );
